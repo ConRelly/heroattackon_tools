@@ -1,0 +1,569 @@
+.FrostivusHUD {
+	width: 100%;
+	height: 100%;
+	z-index: -10;
+}
+
+#FrostivusHUD_alt {
+	width: 40%;
+	height: 25%;
+	margin-top: 3%;
+	horizontal-align: center;
+	visibility: collapse;
+}
+
+#FrostivusPanel {
+	width: 100%;
+	height: 100%;
+}
+
+#FrostivusPanelTimer {
+	height: 20%;
+	align: center top;
+	flow-children: right;
+}
+
+#FrostivusAltar {
+	width: 245px;
+	height: 40px;
+}
+
+#FrostivusAltarButton {
+	width: 50%;
+	height: 100%;
+	background-color: #000000fa;
+	border: 2px solid #4d5051;
+	border-radius: 5px;
+}
+
+#FrostivusTutorialButton {
+	width: 50%;
+	height: 100%;
+	background-color: #000000fa;
+	border: 2px solid #4d5051;
+	border-radius: 5px;
+	horizontal-align: right;
+}
+
+#FrostivusAltarButton:hover {
+	border: 2px solid white;
+}
+
+#FrostivusAltarButton Label {
+	align: center center;
+	color: #6f6f6f;
+	text-transform: uppercase;
+	text-align: center center;
+	font-size: 16px;
+}
+
+#FrostivusAltarButton:hover Label {
+	color: white;
+}
+
+#FrostivusTutorialButton:hover {
+	border: 2px solid white;
+}
+
+#FrostivusTutorialButton Label {
+	align: center center;
+	color: #6f6f6f;
+	text-transform: uppercase;
+	text-align: center center;
+	font-size: 16px;
+}
+
+#FrostivusTutorialButton:hover Label {
+	color: white;
+}
+
+#FrostivusAltarRespawn {
+	margin-bottom: 26%;
+	align: left bottom;
+	flow-children: up;
+}
+
+#FrostivusAltarMenu {
+	width: 245px;
+	height: fit-children;
+	flow-children: down;
+	padding: 2% 2% 2% 2%;
+	border-radius: 5px;
+	background-color: #000000ea;
+}
+
+.FrostivusAltarContent {
+	width: 100%;
+	height: 25px;
+	flow-children: right;
+}
+
+.AltarState {
+	width: 32px;
+	height: 32px;
+	background-image: url("s2r://panorama/images/custom_game/altar_attacked_png.vtex");
+	background-size: 100% 100%;
+}
+
+.AltarButton {
+	width: 87%;
+}
+
+.AltarButton:hover {
+	border: 2px solid orange;
+}
+
+.AltarButton:active {
+	border: 2px solid white;
+}
+
+.AltarButton Label {
+	font-size: 20px;
+	letter-spacing: 1px;
+	text-shadow: 2px 2px 2px black;
+	vertical-align: center;
+}
+
+.AltarButton Label {
+	color: skyblue;
+}
+
+.AltarButton.selected {
+	border: 2px solid dodgerblue;
+}
+
+.AltarButton.radiant {
+	background-color: green;
+}
+
+.AltarButton.dire {
+	background-color: red;
+}
+
+#Timer {
+	font-size: 20px;
+	font-weight: bolder;
+	color: #ffffff;
+	text-shadow: 2px 2px 2px #7b612b;
+	text-align: center;
+	text-overflow: clip;
+}
+
+#Timer.timer_visible {
+	opacity: 1;
+}
+
+#Timer.timer_alert {
+	color: red;
+}
+
+#PhaseLabel
+{
+	font-size: 18px;
+	font-weight: bolder;
+	color: green;
+	text-shadow: 1px 1px 1px #7b612b;
+	text-align: center;
+	text-overflow: clip;
+}
+
+#PhaseLevel
+{
+	horizontal-align: left;
+}
+
+//XHS BOSS BARS
+.HoldoutLabelSmall
+{
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 1px 1px 2px 2.0 #00000011;
+
+	font-family: Radiance,FZKai-Z03,TH Sarabun New,YDYGO 540;
+	font-size: 14px;
+	letter-spacing: 2px;
+	text-overflow: clip;
+
+	horizontal-align: center;
+	text-align: center;	
+	margin-top: 4px;
+	text-shadow: 1px 1px 2px 3.0 #000000;
+	font-size: 16px;
+}
+
+.BossHP
+{
+	width: 750px;
+	height: 40%;
+	margin-top: 50px;
+	height: 150px;
+	visibility: collapse;
+}
+
+.BossProgressBar
+{
+	width: 90%;
+	height: 24px;
+	border-radius: 1px;
+	border: 0px;
+	background-color: black;
+	horizontal-align: right;
+	box-shadow: fill #000 -3px -3px 6px 6px;	
+}
+
+.BossProgressBar_Left
+{
+	box-shadow: inset #000 1px 1px 3px 3px;	
+	border-radius: 2px;
+}
+
+.BossProgressBar_Right
+{
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #222222FF ), to( black ) );
+}
+
+.BossProgressBarContainer
+{
+	width: 100%;
+	height: 40px;
+	margin-top: 30px;
+	margin-right: 6%;
+}
+
+.BossIcon
+{
+	width: 30px;
+	height: 30px;
+	margin-left: 8%;
+	background-repeat: no-repeat;
+	background-position: 50% 0%;
+	background-size: cover;
+	z-index: 10;
+}
+
+.BossHealth
+{
+	margin-left: 6%;
+}
+
+#BossHealth2,
+#BossHealth3 {
+	margin-left: 70px;
+}
+
+.BossLevel,
+.BossLabel
+{
+	horizontal-align: left;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 1px 1px 2px 2.0 #00000011;
+
+	font-family: Radiance,FZKai-Z03,TH Sarabun New,YDYGO 540;
+	font-size: 14px;
+	letter-spacing: 2px;
+	text-overflow: clip;
+
+	text-shadow: 1px 1px 2px 3.0 #000000;
+	font-size: 18px;
+}
+
+.BossLabel
+{
+	margin-left: 3%;
+	horizontal-align: center;
+}
+
+.BossInfo
+{
+	width: 80%;
+	horizontal-align: center;
+}
+
+.BossCastBar {
+	width: 50%;
+	height: 100%;
+	margin-left: 10%;
+	visibility: collapse;
+}
+
+.BossCastAbility {
+	width: 50px;
+	height: 50px;
+	margin-top: 16px;
+	z-index: 20;
+}
+
+.BossCastTimeLabel,
+.BossCastAbilityName
+{
+	margin-top: 31px;
+	margin-left: 15%;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 1px 1px 2px 2.0 #00000011;
+
+	font-family: Radiance,FZKai-Z03,TH Sarabun New,YDYGO 540;
+	font-size: 15px;
+	letter-spacing: 1px;
+	text-overflow: clip;
+
+	horizontal-align: left;
+	text-align: center;	
+	text-shadow: 1px 1px 2px 3.0 #000000;
+	z-index: 20;
+}
+
+.BossCastTimeLabel {
+	margin-left: 66%;
+}
+
+.BossCastProgressBar {
+	width: 80%;
+	height: 35px;
+	margin-left: 7%;
+	align: left center;
+}
+
+.BossCastProgressBar_Left
+{
+	box-shadow: inset #000 1px 1px 3px 3px;	
+	border-radius: 2px;
+}
+
+#BossCastProgressBar2_Right,
+#BossCastProgressBar3_Right
+{
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #222222FF ), to( black ) );
+}
+
+#BossCastProgressBarContainer2,
+#BossCastProgressBarContainer3
+{
+	width: 100%;
+	height: 40px;
+	margin-top: 20%;
+	margin-right: 6%;
+}
+
+#BossCastBar2 {
+	width: 45%;
+}
+
+#BossCastBar2_2 {
+	width: 45%;
+	margin-left: 54%;
+}
+
+.CastBars {
+	width: 1000px;
+	height: 100px;
+	margin-top: 65px;
+}
+
+/* Present HUD  */
+#FrostivusScore {
+	width: 295px;
+	height: fit-children;
+	margin-top: 3.7%;
+	margin-right: 1px;
+	horizontal-align: center;
+	visibility: collapse;
+}
+
+#PresentScore {
+	width: 75px;
+	height: 36px;
+	align: center top;
+	background-image: url("s2r://panorama/images/hud/reborn/bg_timer_psd.vtex");
+	background-size: cover;
+	z-index: 1;
+}
+
+#RadiantScorePanel,
+#DireScorePanel {
+	width: 35%;
+	height: 36px;
+	margin-left: 15%;
+	align: left top;
+	background-color: #08640EDA;
+	background-size: cover;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+#DireScorePanel {
+	margin-right: 15%;
+	align: right top;
+	background-color: #640808DA;
+}
+
+#RadiantScore {
+	margin-top: 5%;
+	margin-right: 15%;
+	align: center center;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	font-size: 18px;
+}
+
+#DireScore {
+	margin-top: 5%;
+	margin-left: 15%;
+	align: center center;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	font-size: 18px;
+}
+
+#PresentIcon {
+	width: 24px;
+	height: 24px;
+	align: center center;
+	background-image: url("s2r://panorama/images/custom_game/present.png");
+	background-size: cover;
+	z-index: 2;
+}
+
+/* Tutorial HUD */
+#TutorialPanel {
+	width: 844px;
+	height: 890px;
+	margin-top: 0%;
+	background-image: url("s2r://panorama/images/custom_game/tutorial.png");
+	background-position: 50% 0%;
+	align: center top;
+	visibility: collapse;
+}
+
+#TutorialTitle {
+	margin-top: 5%;
+	color: white;
+	text-shadow: 4px 4px #000000;
+	font-weight: bold;
+	text-align: center;
+	font-size: 32px;
+	align: center top;
+}
+
+#TutorialTextPanel {
+	width: 700px;
+	height: 355px;
+	align: center bottom;
+	flow-children: down;
+}
+
+.TutorialText {
+	color: white;
+	font-weight: bold;
+	text-align: left;
+	font-size: 18px;
+	text-shadow: 3px 3px 0px 1.0 #000000;
+}
+
+#TutorialButtonPanel {
+	width: 400px;
+	height: 50px;
+	margin-right: 8%;
+	margin-bottom: 2%;
+	align: right bottom;
+	flow-children: right;
+}
+
+.CloseTutorial {
+	vertical-align: bottom;
+	box-shadow: fill #00000088 0px 0px 8px 4px;
+	padding: 4px 10px;
+	border-top-color: #555555;
+	border-left-color: #494949;
+	border-bottom-color: #333333;
+	border-right-color: #404040;
+	transition-property: background-color, opacity;
+	transition-duration: 0.05s;
+	transition-timing-function: linear;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #373d45 ), to( #4d5860 ) );
+	border-style: solid;
+	border-width: 1px;
+}
+
+.CloseTutorial:hover {
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #4c5561 ), to( #6c7d88 ) );
+	border-top-color: #aaaaaa77;
+	border-left-color: #aaaaaa33;
+	border-bottom-color: #333333;
+	border-right-color: #404040;
+}
+
+.CloseTutorial:active {
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #393939), to( #555555 ) );
+
+	border-top-color: #222222;
+	border-left-color: #303030;
+	border-bottom-color: #666666;
+	border-right-color: #444444;
+	sound: "ui_generic_button_click";
+}
+
+.CloseTutorial Label {
+	align: center center;
+	color: #6f6f6f;
+	text-transform: uppercase;
+	text-align: center center;
+	font-size: 18px;
+}
+
+.CloseTutorial:hover Label {
+	color: white;
+}
+
+.CloseTutorial Label
+{
+	margin-top: 2px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #FFFFFF;
+	horizontal-align: center;
+	text-align: center;
+	vertical-align: middle;
+	text-shadow: 2px 2px 0px 1.0 #000000;
+	
+	transition-property: color;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-in-out;	
+}
+
+.CloseTutorial:active Label 
+{
+	transform: translateY(1px);
+	color: grey;
+}
+
+#PreviousTutorial,
+#NextTutorial {
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+#TutorialCloseButton {
+	horizontal-align: right;
+}
+
+#PresentTimer {
+	font-size: 20px;
+	margin-top: 13%;
+	font-weight: bolder;
+	color: #ffffff;
+	text-shadow: 2px 2px 2px #7b612b;
+	text-align: center;
+	text-overflow: clip;
+	align: center top;
+}
+
+#PresentTimer.timer_alert {
+	color: red;
+}

@@ -1,0 +1,59 @@
+.Root{
+     vertical-align: top;
+     horizontal-align: left;
+     margin-left: 140px;
+     margin-right: 10px;
+     margin-top: 12px;
+     width: 100%;
+}
+
+ #ButtonsContainer{
+     flow-children: right;
+ }
+
+ #ButtonsContainer Button{
+     tooltip-position: bottom;
+     width: 30px;
+     height: 30px;
+     background-repeat: no-repeat;
+     background-size: 100%;
+     margin-top: 0px;
+     margin-bottom: 0px;
+     margin-left: 8px;
+     margin-right: 8px;
+     vertical-align: middle;
+     horizontal-align: center;
+     background-position: center;
+     opacity: 0.5;
+     wash-color: #CDF;
+     transition-property: opacity;
+     transition-duration: 0.2s;
+     img-shadow: 0px 0px 3px 3 black;
+ }
+
+ #ButtonsContainer Button:hover{
+     opacity: 1.0;
+     wash-color: white;
+ }
+
+ #ButtonsContainer Button:active{
+     opacity: 1.0;
+ }
+
+
+ #DiscordButton{
+     background-image: url("s2r://panorama/images/custom_game/ui/top_hud_buttons/discord_png.vtex");
+     background-size: 26px;
+ }
+ #PatreonButton{
+    background-image: url("s2r://panorama/images/control_icons/friend_png.vtex");
+    background-size: 26px;
+}
+
+#SiteButton{
+    background-image: url("s2r://panorama/images/control_icons/graph_png.vtex");
+    background-size: 26px;
+}
+ .Hidden{
+    visibility: collapse;
+}

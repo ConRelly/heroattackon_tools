@@ -1,0 +1,225 @@
+.SpellsMenuRoot{
+     width: 100%;
+     height: 100%;
+}
+
+ .SpellsMenuPrecache{
+     visibility: collapse;
+ }
+
+ #SpellsMenuContents,
+#SpellsMenuOpen{
+
+     visibility: collapse;
+ }
+
+ #SpellsMenuContents.Visible,
+#SpellsMenuOpen.Visible{
+
+     visibility: visible;
+ }
+
+ #SpellsMenuContents{
+     width: 100%;
+     height: 100%;
+     z-index: 10;
+     background-color: rgba(0, 0, 0, 0.9);
+ }
+
+
+ #SpellsMenuClose,
+#SpellsMenuOpen,
+#SpellsMenuHidden,
+#SpellsMenu{
+
+
+
+     z-index: 15;
+     height: 100%;
+     width: 100%;
+ }
+
+
+ 
+ #SpellsMenuSwapSpellsButton,
+#SpellsMenuOpenButton{
+
+     align: right top;
+
+     margin-right: 180px;
+     margin-top: 5px;
+
+     z-index: 15;
+     padding: 10px;
+     border-radius: 15%;
+     color: #FFFFFF;
+     background-color: rgb(229, 57, 53);
+ }
+
+ #SpellsMenuSwapSpellsButton{
+     color: #FFFFFF;    
+     background-color: rgb(229, 57, 53);
+     margin-right: 100px;
+     
+ }
+
+ #SpellsMenuCloseButton{
+     align: right top;
+
+     margin-right: 10px;
+     margin-top: 20px;
+
+     z-index: 15;
+     padding: 10px;
+     border-radius: 15%;
+     color: #FFFFFF;
+     background-color: rgb(229, 57, 53);
+ }
+
+ #SpellsMenuHiddenButton{
+     align: right top;
+
+     margin-right: 10px;
+     margin-top: 110px;
+
+     z-index: 15;
+     padding: 10px;
+     border-radius: 15%;
+     color: #FFFFFF;
+     background-color: rgb(229, 57, 53);
+ }
+
+ #SpellsMenuInfo{
+     flow-children: down-wrap;
+     width: 100%;
+     vertical-align: top;
+     height: fit-children;
+     padding: 40px 20px 30px;
+     transition: width 0.25s linear 0s;
+ }
+
+ .SpellsMenuHelperInfo{
+     width: 100%;
+     height: fit-children;
+ }
+
+ #SpellsMenuTitle{
+     font-size: 38px;
+     letter-spacing: 3px;
+     font-weight: bold;
+ }
+
+ #SpellsMenuDescription{
+     font-size: 18px;
+     letter-spacing: 2px;
+ }
+
+ .SpellsMenuHelperInfo Label{
+     width: 100%;
+ }
+
+ .SpellsMenuHelperCardPointsInfo{
+     margin-top: 30px;
+     flow-children: right-wrap;
+     width: 100%;
+     height: fit-children;
+ }
+
+ .SpellsMenuHelperCardPointsInfo Label{
+     font-size: 30px;
+     font-weight: bold;
+     width: fit-children;
+     color: #00f5ff;
+ }
+
+
+ #SpellsMenuHeroesBlock{
+     width: 100%;
+     flow-children: down;
+     height: 100%;
+ }
+
+ .SpellsMenuHeroesContents{
+     width: 100%;
+     flow-children: right-wrap;
+     vertical-align: top;
+     height: fit-children;
+     padding: 40px 20px 30px;
+     transition: width 0.25s linear 0s;
+ }
+
+ #SpellsMenuSpellsBlock{
+     width: 50%;
+     height: fit-children;
+     align: center center;
+     flow-children: right-wrap;
+     margin-top: 100px;
+ }
+
+ .SingleSpellPanel{
+     flow-children: down;
+     margin-right: 32px;
+     background-color: rgba(0, 0, 0, 0.99);
+ }
+
+ .CpCostIndicator{
+     align: center center;
+     visibility: collapse;
+ }
+
+ .HeroPanel{
+     width: 64px;
+     height: 36px;
+ }
+
+ #HeroImage{
+     width: 64px;
+     height: 36px;
+     align: center center;
+     z-index: 2;
+ }
+
+ .SpecialPanel{
+     width: 64px;
+     height: 64px;
+ }
+
+ #SpecialImage{
+     width: 64px;
+     height: 64px;
+     align: center center;
+     z-index: 2;
+ }
+
+
+ .ConfigRoot{
+
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+ }
+
+ #ConfigContent{
+
+  width: 600px;
+  background-color: rgba(0,0,0,0.7);
+  horizontal-align: center;
+  vertical-align: center;
+  visibility: collapse;
+ }
+
+ #ConfigContent.Show{
+
+  visibility: visible;
+ }
+
+ #ConfigBG{
+
+  margin: 100px 600px;
+  flow-children: down;
+ }
+
+ .ConfigRow{
+
+  margin-bottom: 10px;
+}

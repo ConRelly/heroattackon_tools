@@ -1,0 +1,105 @@
+<root>
+
+	<styles>
+		<include src="s2r://panorama/styles/custom_game/hero_damage.vcss_c"/>
+	
+	</styles>
+	
+	<scripts>
+		<include src="s2r://panorama/scripts/custom_game/hero_damage.vjs_c"/>
+	</scripts>
+	
+	<snippets>
+	 
+		<snippet name="Player">
+		
+			<Panel class="Player" > 
+				<!--
+				<Panel class="HeaderColumn">
+					<Panel id="PlayerColor" />
+					<DOTAAvatarImage id="PlayerAvatar" />
+					<Image id="HeroIcon" />
+					<Panel id="NameAndHero" class="FullWidthHeight TopBottomFlow">
+						<DOTAUserName id="PlayerNameScoreboard" />
+						<Panel class="LeftRightFlow">
+							<Label id="HeroLevelLabel" class="MonoNumbersFont" text="{d:hero_level}"/>
+							<Label id="LevelAndHero" text="{s:hero_name}"/>
+						</Panel>
+					</Panel>
+				</Panel>
+				-->
+				<Panel id="LeftSide"> 
+					<Panel id="LeftSideHeader">
+						<Image id="HeroIcon" />
+						<Label id="PlayerHeroSignal" text="Player Hero" />
+						<Panel id="PlayerColor" />
+					</Panel>
+					
+					<Label id="PlayerDamageDealtSignal" text="Damage Dealt" />
+					<Label id="PlayerDamageTakenSignal" text="Damage Taken" /> 
+					<Label id="PlayerDamageHealedSignal" text="Damage Healed" />
+					<Label id="PlayerDPSSignal" text="DPS" />
+					<Panel id="PlayerDamageTypes"> 
+						<Panel id="PlayerPhysical">
+							<Label id="Playerphysdamagepercent" text="0%" />
+						</Panel>
+						<Panel id="PlayerMagical">
+							<Label id="Playermagdamagepercent" text="0%" />
+						</Panel>
+						<Panel id="PlayerPure">
+							<Label id="Playerpuredamagepercent" text="0%" />
+						</Panel>
+					</Panel>
+				</Panel>
+				<Panel id = "RightSide">
+					<Label id="EmptySpace"		text=""	/>
+					<Label id="PlayerDamageDealt" text="Sample" />
+					<Label id="PlayerDamageTaken" text="Sample" /> 
+					<Label id="PlayerDamageHealed" text="Sample" />
+					<Label id="PlayerDPS" text="Sample" />
+				</Panel>
+			</Panel>
+			
+		</snippet> 
+		
+		<snippet name="AttackColumn">
+			<Panel>
+			<Image class="LegendPanel AttackColumn" src="s2r://panorama/images/custom_game/ping_icon_attack_45x45_png.vtex" onmouseover="UIShowTextTooltipStyled( #DOTA_Plus_Death_Screen_DamageByHero, ShortTextTooltip )" onmouseout="UIHideTextTooltip()" />
+			</Panel>
+		</snippet>
+	</snippets>
+	
+	<Panel class ="DamageList">
+		<Button id="toggle_button" onactivate="ToggleUI();" >
+			<Label text="TOGGLE" hittest="false" />
+		</Button>
+		<Panel id="Players">
+		
+		</Panel>
+		<Panel id="damage_detail">
+			<Panel id="btn_hide_damage_detail" onactivate="HideDamageDetail();">
+					<Label text="#DOTA_TournamentButtonHide" hittest="false" />
+			</Panel>
+			
+			<Panel id="damage_detail_box">
+				<Panel id="damage_detail_phys">
+					<Label class="damage_detail_name"	text="#DOTA_Plus_Death_Screen_PhysicalDamage"	/>
+					<Panel class="damage_detail_list" id="damage_detail_phys_list">
+					</Panel>
+				</Panel>
+				<Panel id="damage_detail_mage">
+					<Label class="damage_detail_name"	text="#DOTA_Plus_Death_Screen_MagicalDamage"	/>
+					<Panel class="damage_detail_list" id="damage_detail_mage_list">
+					</Panel>
+				</Panel>
+				<Panel id="damage_detail_pure">
+					<Label class="damage_detail_name"	text="#DOTA_Plus_Death_Screen_PureDamage"	/>
+					<Panel class="damage_detail_list" id="damage_detail_pure_list">
+					</Panel>
+				</Panel>
+			</Panel>
+		</Panel>
+	</Panel>
+
+
+</root>

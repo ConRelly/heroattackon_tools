@@ -1,0 +1,321 @@
+.DamageList
+{
+	/* width: 400px; */
+	width: 600px;
+	height: 600px;
+	/* margin-top:135px; */
+	margin-top:125px;
+	horizontal-align: left;
+	/* horizontal-align: right; */
+	vertical-align: top;
+}
+#PlayerDamageTypes
+{
+	flow-children:right;
+	width: 120px;
+	height: 18px;
+	background-color: #010000;
+}
+#PlayerPhysical
+{
+	width: 40px;
+	margin-top:3px;
+	margin-bottom:3px;
+	height: 18px;
+	background-color: #B9500B;
+}
+#Playerphysdamagepercent
+{
+	color:white;
+	font-size:13px;
+}
+#PlayerMagical
+{
+	width: 40px;
+	margin-top:3px;
+	margin-bottom:3px;
+	height: 18px;
+	background-color: #257DAE;
+}
+#Playermagdamagepercent
+{
+	color:white;
+	font-size:13px;
+}
+#PlayerPure
+{
+	width: 40px;
+	margin-top:3px;
+	margin-bottom:3px;
+	height: 18px;
+	background-color: #B2B2B2;
+}
+#Playerpuredamagepercent
+{
+	color:white;
+	font-size:13px;
+}
+#PlayerColor 
+{
+	horizontal-align: left;
+	font-size:24px;
+} 
+ 
+#Players
+{
+	flow-children:down;
+	margin-top:30px;
+} 
+.Player
+{  
+	background-color: #010000;
+	opacity:0.6;
+	flow-children:right;
+	color:white;
+	margin-bottom:4px;
+
+}
+#LeftSide
+{
+	flow-children:down;
+}
+
+#RightSide
+{
+	flow-children:down;
+}
+#EmptySpace
+{
+	color:white;
+	font-size:14px;
+}
+#PlayerHeroSignal
+{
+	color:Yellow;
+	font-size:14px;
+}
+
+#PlayerDamageDealtSignal
+{
+	color:white;
+	font-size:14px;
+}
+#PlayerDamageTakenSignal
+{
+	color:white;
+	font-size:14px;
+}
+#PlayerDamageHealedSignal
+{
+	color:white;
+	font-size:14px;
+}
+#PlayerDPSSignal
+{
+	color:white;
+	font-size:14px;
+}
+#PlayerDamageDealt
+{
+	color:white;
+	font-size:14px;
+}
+#PlayerDamageTaken
+{
+	color:white;
+	font-size:14px;
+}
+#PlayerDamageHealed
+{
+	color:white;
+	font-size:14px;
+}
+#PlayerDPS
+{
+	color:white;
+	font-size:14px;
+}
+
+/* .HeaderColumn { */
+  /* width: 280px; */
+/* } */
+/* .Player > .HeaderColumn { */
+  /* height: 100%; */
+  /* flow-children: right; */
+/* } */
+
+/* .Player > .HeaderColumn #PlayerAvatar { */
+  /* width: 42px; */
+  /* height: 42px; */
+  /* margin-left: 6px; */
+  /* vertical-align: center; */
+  /* border: 4px solid #000; */
+/* } */
+
+/* .Player > .HeaderColumn #HeroIcon { */
+  /* width: 72px; */
+  /* height: 42px; */
+  /* vertical-align: center; */
+  /* background-color: rgba(0, 0, 0, 0.87); */
+  /* border: 1px solid #000; */
+/* } */
+
+#LeftSideHeader {
+	width: 120px;
+}
+#LeftSideHeader #HeroIcon {
+	width: 36px;
+	height: 21px;
+}
+#LeftSideHeader #PlayerHeroSignal {
+	horizontal-align: right;
+}
+/* #LeftSideHeader #PlayerColor{
+	 width: 100%; 
+	 height: 4px; 
+	 z-index: 5;
+	
+} */
+
+
+#toggle_button
+{
+	/* horizontal-align: right; */
+	/* background-image: url("s2r://panorama/images/hud/button_thin_secondary_png.vtex"); */
+	background-image: url("s2r://panorama/images/hud/reborn/stash_grab_all_button_psd.vtex");
+	
+	background-size: 100% 100%;
+	transition-property: pre-transform-scale2d;
+	transition-duration: 0.15s;
+	transition-timing-function: ease-in-out;
+	width: 90px;
+	height: 19px;
+	/* visibility: collapse; */
+	visibility: visible;
+}
+#toggle_button
+{
+	background-image: url("s2r://panorama/images/hud/reborn/stash_grab_all_button_psd.vtex");
+	/* width: 102px; */
+	/* height: 26px; */
+    /* margin-top: 3px; */
+    transition-property: brightness, transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+#toggle_button Label
+{
+	font-size: 14px;
+	color: white;
+	horizontal-align: center;
+	margin-top: 2px;
+}
+#toggle_button:hover
+{
+    brightness: 1.7;
+}
+
+#damageViewToggle
+{
+	background-image: url("s2r://panorama/images/hud/reborn/stash_grab_all_button_psd.vtex");
+	/* width: 102px; */
+	/* height: 26px; */
+    /* margin-top: 3px; */
+	background-size: 100% 100%;
+	transition-property: pre-transform-scale2d;
+    transition-property: brightness, transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+#damageViewToggle Label
+{
+	font-size: 17px;
+	color: white;
+	horizontal-align: center;
+ 	margin-top: 2px; 
+	margin-left: 22px;
+}
+#damageViewToggle:hover
+{
+    brightness: 1.7;
+}
+#damageViewToggle.active Label
+{
+    color: green;
+}
+
+
+#damage_detail {
+	horizontal-align: right;
+	/* vertical-align: top; */
+	/* margin-left: 256px; */
+	/* width: 800px; */
+	visibility: collapse;
+	flow-children: down;
+	opacity:0.8;
+}
+#btn_hide_damage_detail Label
+{
+	font-size: 14px;
+	color: white;
+	horizontal-align: center;
+	margin-top: 2px;
+}
+#btn_hide_damage_detail:hover
+{
+    brightness: 1.7;
+}
+#damage_detail_box {
+	flow-children:right;
+	background-color: #010000;
+	padding-left: 6px;
+	/* overflow: square scroll; */
+}
+#damage_detail_phys, #damage_detail_mage, #damage_detail_pure {
+	border-style: solid;
+	border-width: 1px;
+	/* border-color: red; */
+	width: 120px;
+	min-height: 400px;
+	max-height: 800px;
+	margin-right: 6px;
+	flow-children: down;
+}
+.damage_detail_list{
+	flow-children: down;
+	padding: 2px;
+}
+.damage_detail_list DOTAItemImage, .damage_detail_list DOTAAbilityImage, .damage_detail_list .AttackColumn{
+	width: 38px;
+	height: 38px;
+	margin-bottom: 2px;
+	/* height: 40px; */
+}
+.damage_detail_pure_list_i_d{
+	color:white;
+	/* font-size:13px; */
+	/* width: 100%; */
+	margin-left: 46px;
+	text-align: center;
+	vertical-align: center;
+}
+.damage_detail_list DOTAAbilityImage{
+	/* width: 40px; */
+	/* height: 40px; */
+}
+#damage_detail .damage_detail_name{
+	horizontal-align: center;
+	text-align: center;
+	padding: 2px;
+	font-weight:bold;
+	width: 100%;
+	
+	border-style: solid;
+	border-width: 1px;
+	border-bottom-color: red;
+}
+#damage_detail #btn_hide_damage_detail{
+	font-weight:bold;
+	width: 100%;
+	background-color: #666699;
+}

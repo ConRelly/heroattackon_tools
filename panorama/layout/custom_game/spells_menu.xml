@@ -1,0 +1,89 @@
+<!-- xml reconstructed by ValveResourceFormat: https://vrf.steamdb.info/ -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/hudstyles.vcss_c" />
+		<include src="s2r://panorama/styles/custom_game/dota_hud/spells_menu/main.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="s2r://panorama/scripts/custom_game/dota_hud/spells_menu/heroes.vjs_c" />
+	</scripts>
+	<snippets>
+		<snippet name="hero">
+			<Panel class="HeroPanel">
+				<Button id="HeroPanelButton" onactivate="OpenSpellsListForHero()">
+					<Panel id="HeroBorder" />
+					<Panel id="HeroImage">
+						<DOTAHeroImage id="HeroPictureImage" heroimagestyle="landscape" />
+					</Panel>
+				</Button>
+			</Panel>
+		</snippet>
+		<snippet name="special">
+			<Panel class="SpecialPanel">
+				<Button id="SpecialPanelButton" onactivate="OpenSpellsListForHero()">
+					<Panel id="HeroBorder" />
+					<Panel id="SpecialImage">
+						<Image id="SpecialPictureImage" />
+					</Panel>
+				</Button>
+			</Panel>
+		</snippet>
+		<snippet name="spell">
+			<Panel class="SingleSpellPanel">
+				<Button id="SingleSpellPanelButton" onactivate="BuySpell()">
+					<Panel id="HeroBorder" />
+					<Panel id="SingleSpellImage">
+						<DOTAAbilityImage id="SingleSpellPictureImage" />
+					</Panel>
+				</Button>
+				<Label class="CpCostIndicator" text="#DOTA_HUD_Spells_Menu_Spell_Cost" />
+				<Label class="CpCostIndicator" id="SpellCost" />
+			</Panel>
+		</snippet>
+	</snippets>
+	<Panel hittest="false" class="SpellsMenuRoot">
+		<Panel hittest="false" id="SpellsMenuContents">
+			<Panel id="SpellsMenuClose" hittest="false" class="">
+				<Button id="SpellsMenuCloseButton" onactivate="CloseSpellsMenu();">
+					<Label text="#DOTA_HUD_Spells_Menu_Close_Button" />
+				</Button>
+			</Panel>
+			<Panel id="SpellsMenuHidden" hittest="false" class="">
+				<Button id="SpellsMenuHiddenButton" onactivate="OpenHiddenSpellsMenu();">
+					<Label text="#DOTA_HUD_Spells_Hidden_Menu_Button" />
+				</Button>
+			</Panel>
+			<Panel id="SpellsMenu" hittest="false" class="">
+				<Button id="SpellsMenuOpenButton" onactivate="OpenSpellsMenu();">
+					<Label text="#DOTA_HUD_Spells_Swap_Menu_Button" />
+				</Button>
+			</Panel>
+			<Panel id="SpellsMenuHeroesBlock">
+				<Panel id="SpellsMenuInfo">
+					<Panel class="SpellsMenuHelperInfo">
+						<Label id="SpellsMenuTitle" text="#DOTA_HUD_Spells_Menu_Title" />
+					</Panel>
+					<Panel class="SpellsMenuHelperInfo">
+						<Label id="SpellsMenuDescription" text="#DOTA_HUD_Spells_Menu_Description" />
+					</Panel>
+				</Panel>
+				<Panel id="SpellsMenuHeroesStrengthBlock" class="SpellsMenuHeroesContents" />
+				<Panel id="SpellsMenuHeroesAgilityBlock" class="SpellsMenuHeroesContents" />
+				<Panel id="SpellsMenuHeroesIntelligenceBlock" class="SpellsMenuHeroesContents" />
+				<Panel id="SpellsMenuSpecialsBlock" class="SpellsMenuHeroesContents" />
+			</Panel>
+			<Panel id="SpellsMenuSpellsBlock" />
+		</Panel>
+		<Panel id="SpellsMenuOpen" hittest="false" class="Visible">
+			<Button id="SpellsMenuOpenButton" onactivate="OpenSpellsMenu();">
+				<Label text="#DOTA_HUD_Spells_Menu_Open_Button" />
+			</Button>
+		</Panel>
+		<Panel class="SpellsMenuPrecache" hittest="false">
+			<Image src="s2r://panorama/images/spells_menu/strength_png.vtex" />
+			<Image src="s2r://panorama/images/spells_menu/agility_png.vtex" />
+			<Image src="s2r://panorama/images/spells_menu/intellect_png.vtex" />
+		</Panel>
+	</Panel>
+</root>

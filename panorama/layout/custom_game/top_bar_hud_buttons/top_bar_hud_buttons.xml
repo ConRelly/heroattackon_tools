@@ -1,0 +1,16 @@
+
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/custom_game/top_bar_hud_buttons/top_bar_hud_buttons.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="s2r://panorama/scripts/custom_game/top_bar_hud_buttons/top_bar_hud_buttons.vjs_c" />
+	</scripts>
+	<Panel class="Root" hittest="false" hittestchildren="true">
+		<Panel id="ButtonsContainer" hittest="true" hittestchildren="true">
+			<Button id="DiscordButton" onactivate="OnDiscordButtonPressed()" onmouseover="UIShowTextTooltip( #ui_top_hud_buttons_discord )" onmouseout="UIHideTextTooltip()" />
+			<Button id="PatreonButton" onactivate="OnPatreonButtonPressed()" onmouseover="UIShowTextTooltip( #ui_top_hud_buttons_patreon )" onmouseout="UIHideTextTooltip()" />
+			<Button id="SiteButton" onactivate="OnSiteButtonPressed()" onmouseover="UIShowTextTooltip( #ui_top_hud_buttons_site )" onmouseout="UIHideTextTooltip()" />
+		</Panel>
+	</Panel>
+</root>
