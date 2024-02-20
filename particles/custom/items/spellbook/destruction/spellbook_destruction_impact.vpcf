@@ -1,0 +1,311 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{ec5bfcca-b89d-4591-9ef4-c8679487d623} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_nBehaviorVersion = 4
+	m_nFirstMultipleOverride_BackwardCompat = 5
+	m_controlPointConfigurations = 
+	[
+		
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 1
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 2
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = 
+					[
+						600.000000,
+						0.000000,
+						0.000000,
+					]
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 3
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+				
+				{
+					m_iControlPoint = 4
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+	m_Emitters = 
+	[
+		
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1.000000
+			}
+		},
+	]
+	m_Initializers = 
+	[
+		
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMax = 
+			[
+				242,
+				234,
+				226,
+			]
+			m_ColorMin = 
+			[
+				255,
+				255,
+				255,
+			]
+			m_TintMin = 
+			[
+				0,
+				0,
+				0,
+			]
+			m_TintMax = 
+			[
+				255,
+				255,
+				255,
+			]
+		},
+		
+		{
+			_class = "C_INIT_RandomRadius"
+			m_flRadiusMin = 64.000000
+			m_flRadiusMax = 72.000000
+		},
+		
+		{
+			_class = "C_INIT_RandomAlpha"
+			m_nAlphaMin = 128
+		},
+		
+		{
+			_class = "C_INIT_RandomRotation"
+			m_flDegreesMin = 360.000000
+			m_flDegreesMax = 0.000000
+		},
+		
+		{
+			_class = "C_INIT_RingWave"
+			m_bEvenDistribution = true
+			m_flInitialRadius = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 32.000000
+			}
+			m_flInitialSpeedMin = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1300.000000
+			}
+			m_flInitialSpeedMax = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1400.000000
+			}
+		},
+		
+		{
+			_class = "C_INIT_SequenceLifeTime"
+		},
+		
+		{
+			_class = "C_INIT_InitialVelocityNoise"
+			m_vecOutputMin = 
+			[
+				-24.000000,
+				-24.000000,
+				100.000000,
+			]
+			m_vecOutputMax = 
+			[
+				24.000000,
+				24.000000,
+				200.000000,
+			]
+		},
+	]
+	m_Operators = 
+	[
+		
+		{
+			_class = "C_OP_BasicMovement"
+			m_fDrag = 0.150000
+		},
+		
+		{
+			_class = "C_OP_ColorInterpolate"
+			m_ColorFade = 
+			[
+				78,
+				68,
+				68,
+			]
+		},
+		
+		{
+			_class = "C_OP_Decay"
+			m_flOpEndFadeInTime = 5.000000
+			m_flOpStartFadeInTime = 5.000000
+		},
+		
+		{
+			_class = "C_OP_FadeOutSimple"
+			m_flFadeOutTime = 1.000000
+		},
+		
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flEndScale = 0.500000
+		},
+	]
+	m_ForceGenerators = 
+	[
+		
+		{
+			_class = "C_OP_RandomForce"
+			m_MinForce = 
+			[
+				-1200.000000,
+				-1200.000000,
+				-200.000000,
+			]
+			m_MaxForce = 
+			[
+				1200.000000,
+				1200.000000,
+				200.000000,
+			]
+		},
+	]
+	m_Renderers = 
+	[
+		
+		{
+			_class = "C_OP_RenderSprites"
+			m_flStartFadeSize = 0.575000
+			m_flEndFadeSize = 0.650000
+			m_flMaxSize = 0.750000
+			m_flOverbrightFactor = 2.000000
+			m_flAddSelfAmount = 1.000000
+			m_bSaturateColorPreAlphaBlend = false
+			m_flAnimationRate = 30.000000
+			m_bAnimateInFPS = true
+			m_bDisableOperator = true
+			m_vecTexturesInput = 
+			[
+				
+				{
+					m_hTexture = resource:"materials/particle/fire_particle_2/fire_particle_2.vtex"
+				},
+			]
+			m_OutlineColor = 
+			[
+				255,
+				255,
+				255,
+			]
+		},
+	]
+	m_Children = 
+	[
+		
+		{
+			m_ChildRef = resource:"particles/custom/items/spellbook/destruction/spellbook_destruction_impact_o.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/custom/items/spellbook/destruction/spellbook_destruction_impact_a.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/econ/items/invoker/invoker_apex/invoker_sun_strike_glow_b_immortal1.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/custom/items/spellbook/destruction/spellbook_destruction_impact_d.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/custom/items/spellbook/destruction/spellbook_destruction_impact_c.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/custom/items/spellbook/destruction/spellbook_destruction_impact_i.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/custom/items/spellbook/destruction/spellbook_destruction_impact_h.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/custom/items/spellbook/destruction/spellbook_destruction_impact_q.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/custom/items/spellbook/destruction/spellbook_destruction_impact_k.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/econ/items/invoker/invoker_apex/invoker_sun_strike_light_immortal1.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/custom/items/spellbook/destruction/spellbook_destruction_impact_l.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/econ/items/invoker/invoker_apex/invoker_sun_strike_warp_blast_immortal1.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/custom/items/spellbook/destruction/spellbook_destruction_impact_p.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/custom/items/spellbook/destruction/spellbook_destruction_impact_f.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/custom/items/spellbook/destruction/spellbook_destruction_impact_o.vpcf"
+			m_bDisableChild = true
+		},
+		
+		{
+			m_ChildRef = resource:"particles/custom/items/spellbook/destruction/spellbook_destruction_impact_m.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/custom/items/spellbook/destruction/spellbook_destruction_impact_j.vpcf"
+		},
+		
+		{
+			m_ChildRef = resource:"particles/custom/items/spellbook/destruction/spellbook_destruction_impact_e.vpcf"
+		},
+	]
+}
